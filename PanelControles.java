@@ -81,24 +81,21 @@ public class PanelControles extends JPanel{
 						BufferedReader bf=new BufferedReader(new FileReader(rutaArchivo));
 						String linea=bf.readLine();
 						StringTokenizer st = new StringTokenizer(linea, ",");
-		
-						usuario.setNombre(st.nextToken());
-						usuario.setrFC(st.nextToken());
-						usuario.setSaldo(Double.parseDouble(st.nextToken()));
-						usuario.setAguinaldo(Double.parseDouble(st.nextToken()));
-						usuario.setpVacacional(Double.parseDouble(st.nextToken()));
-						usuario.setgMedicos(Double.parseDouble(st.nextToken()));
-						usuario.setgFunerarios(Double.parseDouble(st.nextToken()));
-						usuario.setsGMM(Double.parseDouble(st.nextToken()));
-						usuario.setHipotecarios(Double.parseDouble(st.nextToken()));
-						usuario.setDonativos(Double.parseDouble(st.nextToken()));
-						usuario.setsRetiro(Double.parseDouble(st.nextToken()));
-						usuario.settEscolar(Double.parseDouble(st.nextToken()));
-						usuario.setnEducativo(st.nextToken());
-						usuario.setColegiatura(Double.parseDouble(st.nextToken()));
-
-						
 						while(linea != null){
+							usuario.setNombre(st.nextToken());
+							usuario.setrFC(st.nextToken());
+							usuario.setSaldo(Double.parseDouble(st.nextToken()));
+							usuario.setAguinaldo(Double.parseDouble(st.nextToken()));
+							usuario.setpVacacional(Double.parseDouble(st.nextToken()));
+							usuario.setgMedicos(Double.parseDouble(st.nextToken()));
+							usuario.setgFunerarios(Double.parseDouble(st.nextToken()));
+							usuario.setsGMM(Double.parseDouble(st.nextToken()));
+							usuario.setHipotecarios(Double.parseDouble(st.nextToken()));
+							usuario.setDonativos(Double.parseDouble(st.nextToken()));
+							usuario.setsRetiro(Double.parseDouble(st.nextToken()));
+							usuario.settEscolar(Double.parseDouble(st.nextToken()));
+							usuario.setnEducativo(st.nextToken());
+							usuario.setColegiatura(Double.parseDouble(st.nextToken()));
 							JOptionPane.showMessageDialog(PanelControles.this, deduccion.toString());
 							linea=bf.readLine();
 						}
