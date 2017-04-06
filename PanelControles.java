@@ -80,8 +80,9 @@ public class PanelControles extends JPanel{
 					try{
 						BufferedReader bf=new BufferedReader(new FileReader(rutaArchivo));
 						String linea=bf.readLine();
-						StringTokenizer st = new StringTokenizer(linea, ",");
+						
 						while(linea != null){
+							StringTokenizer st = new StringTokenizer(linea, ",");
 							usuario.setNombre(st.nextToken());
 							usuario.setrFC(st.nextToken());
 							usuario.setSaldo(Double.parseDouble(st.nextToken()));
